@@ -4,7 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
+    <Button
+        android:id="@+id/btn_bundle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bundle"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_shared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SharedPreferences"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_files"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Archivos"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sqlite" />
 </LinearLayout>

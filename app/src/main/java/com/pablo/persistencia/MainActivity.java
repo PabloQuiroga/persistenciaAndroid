@@ -1,9 +1,12 @@
 package com.pablo.persistencia;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.pablo.persistencia.bundles.BundlesActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -29,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_bundle:{
+                Intent intent = new Intent(MainActivity.this, BundlesActivity.class);
+                startActivity(intent);
                 break;
             }
             case R.id.btn_shared:{

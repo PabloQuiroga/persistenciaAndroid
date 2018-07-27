@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bundles.BundlesActivity"></activity>
+        <activity android:name=".bundles.BundlesActivity" />
+        <activity android:name=".archivos.FilesActivity" />
+        <activity android:name=".archivos.from_raw.RawActivity"></activity>
     </application>
 
 </manifest>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">persistencia</string>
+
+    <string name="btn_in">en la app</string>
+    <string name="btn_from_app">de la app</string>
+    <string name="btn_from_sistem">system</string>
 </resources>

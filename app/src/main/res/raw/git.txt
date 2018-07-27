@@ -1,0 +1,75 @@
+:q  (simil al escape)
+(escape):wq  en la consola de actualizacion de mensajes para salir
+HEAD   apunta al ultimo commit realizado
+
+//muestra de forma simple los cambios
+git status -s 
+
+//muestra la rama en la que estamos trabajando
+git status -b
+
+//muestra configuracion de usuario
+git config --global -e  (modo escritura)
+git config --global -l  (modo lectura)
+
+//rollback al commit previo al cambio
+git checkout --.
+git checkout -- README.md  (rollback sobre el archivo)
+
+//agregar archivos al stage
+git add .  (agrega todos)
+git add *.png   (agrega por extension)
+git add folder/  (agrega el contenido de una carpeta)
+git add "*.txt"  (agrega todos los txt del proyecto)
+git add *.txt  (agrega todos los txt del directorio actual)
+git add --all (agrega todo)
+git add <lista>  (agrega archivos listados separados por espacio)
+git add pdfs/*.pdf  (agrega archivos por extension dentro de una carpeta)
+git add -u  (actualiza todo)
+
+//Commits
+git commit -am "Readme agregado"  (agrega y commitea)
+git commit -m "archivo agregado" (agrega archivo al stage)
+
+//quita archivos del stage
+git reset *.xml  (quita del stage por extension)
+git reset index.xml  (quita del stage archivo especifico)
+git reset HEAD README.md (simil anterior)
+
+//LOG
+git log  (ver log normal)
+git log --oneline (muestra hash simple y texto)
+git log --oneline --decorate --all --graph 
+
+//creacion de alias para comandos largos
+git config --global alias.lg "git log --oneline"
+git lg  (reconoce el alias y muestra lo especificado)
+
+//muestra cambios entre el ultimo commit y ahora
+git diff (en rojo lo anterior, verde lo actual)
+git diff --staged (commit anterior y cambios en el stage)
+
+//actualizar mensaje de commit 
+git commit --amend -m "actualizado"  (modo simple)
+git commit --amend   (abre el editor para actualizar mensaje)
+
+//vuelve a commit anterior
+git reset --soft 3455d7ed  (vuelve a commit especificado sin cambiar archivos)
+git reset --mixed 3455d7ed  (vuelve a commit anterior manteniendo los cambios)
+git reset --hard 860c6c2   (revierte y borra cambios posteriores a el commit)
+git reflog  (muestra historial de cambios al repositorio)
+ --con reflog podemos revertir un cambio realizado en cualquier punto
+ --con el reflog obtenemos el hash para reset --hard
+
+//Ramas
+git branch nombreBranch  (crea una nueva rama)
+git branch  (muestra las ramas y cual es la activa)
+git checkout nombreBranch (se mueve a la rama especificada)
+git diff nombreBranch master  (muestra cambios entre ramas)
+git merge nombreBranch  (desde master actualiza con los cambios realizados en la otra rama)
+git branch -d nombreBranch  (elimina una rama)
+git checkout -b nombreBranch  (crea y se mueve a la nueva rama)
+ 
+//TAGs
+git tag -a v1.0.0 -m "Version 1.0.0"  (agrega un Tag con ese nombre y ese mensaje)
+git tag -a v0.1.0 345d7de -m "version 0.1.0"  (crea tag en commit especifico con nombre y mensaje)
